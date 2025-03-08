@@ -11,11 +11,6 @@ This is a RESTful API for managing a product catalog. It allows you to perform C
 5. [Error Handling](#error-handling)
 6. [Testing](#testing)
 7. [Caching](#caching)
-8. [Rate Limiting](#rate-limiting)
-9. [API Documentation](#api-documentation)
-10. [Bonus Features](#bonus-features)
-11. [Contributing](#contributing)
-12. [License](#license)
 
 ---
 
@@ -69,11 +64,44 @@ This is a RESTful API for managing a product catalog. It allows you to perform C
 2. Install dependencies:
     composer install
 
-3. Run migrations and seed the database
+3. Update the following variables in .env
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=product_catalog
+    DB_USERNAME=root
+    DB_PASSWORD=
+    CACHE_DRIVER=file
+
+4. Run migrations and seed the database
     php artisan migrate --seed
 
-4. Start the development server
+5. Start the development server
     php artisan serve
-5. Access the API at http://localhost:8000/api
-6. API Documentation
+6. Access the API at http://localhost:8000/api
+7. API Documentation
     http://localhost:8000/api/documentation
+
+## API Endpoints
+
+1. Products
+    - GET /api/v1/products: Retrieve a paginated list of products (10 per page).
+
+    - Query Parameters:
+    - category_id (optional): Filter products by category ID.
+    - search (optional): Search products by name or description.
+
+    - GET /api/v1/products/{id}: Retrieve a specific product by ID.
+
+    - POST /api/v1/products: Create a new product
+    - PUT /api/v1/products/{id}: Update an existing product.
+    - DELETE /api/v1/products/{id}: Delete a product.
+
+2. Categories
+     - GET /api/v1/categories: Retrieve a list of all categories, including parent-child relationships.
+
+## Testing
+    - php artisan test
+
+## Caching
+    - Frequently accessed data (e.g., product lists, category lists) is cached using Laravel's caching mechanisms. Cache is cleared automatically when products or categories are updated or deleted.
