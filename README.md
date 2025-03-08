@@ -8,9 +8,8 @@ This is a RESTful API for managing a product catalog. It allows you to perform C
 2. [Technologies Used](#technologies-used)
 3. [Setup Instructions](#setup-instructions)
 4. [API Endpoints](#api-endpoints)
-5. [Error Handling](#error-handling)
-6. [Testing](#testing)
-7. [Caching](#caching)
+5. [Testing](#testing)
+6. [Caching](#caching)
 
 ---
 
