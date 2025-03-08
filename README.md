@@ -104,4 +104,4 @@ This is a RESTful API for managing a product catalog. It allows you to perform C
     - php artisan test
 
 ## Caching
-    - Frequently accessed data (e.g., product lists, category lists) is cached using Laravel's caching mechanisms. Cache is cleared automatically when products or categories are updated or deleted.
+1. Frequently accessed data (e.g., product lists, category lists) is cached using Laravel's caching mechanisms. Cache is cleared automatically when products or categories are updated or deleted.
