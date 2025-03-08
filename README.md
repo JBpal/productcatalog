@@ -51,7 +51,6 @@ This is a RESTful API for managing a product catalog. It allows you to perform C
 - PHP 8.2+
 - Composer
 - MySQL
-- Redis (optional, for caching)
 
 ### Installation
 
