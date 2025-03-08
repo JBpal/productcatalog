@@ -62,9 +62,11 @@ This is a RESTful API for managing a product catalog. It allows you to perform C
    cd product-catalog-api
 
 2. Install dependencies:
+    ```bash
     composer install
 
 3. Update the following variables in .env
+    ```bash
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
@@ -74,9 +76,11 @@ This is a RESTful API for managing a product catalog. It allows you to perform C
     CACHE_DRIVER=file
 
 4. Run migrations and seed the database
+    ```bash
     php artisan migrate --seed
 
 5. Start the development server
+    ```bash
     php artisan serve
 6. Access the API at http://localhost:8000/api
 7. API Documentation
